@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/index(team).css">
+    <link rel="stylesheet" href="../icon/iconfont.css">
+</head>
+<body>
+    <header>
+      <div class="header_box">
+        <h1>
+          <img src="../images/logo.png" alt="">
+        </h1>
+        <nav>
+          <ul>
+            <li>
+              <a href="../html/index.html" target="_blank">首页</a>
+            </li>
+            <li>
+              <a href="../html/index(about).html" target="_blank">关于我们</a>
+            </li>
+            <li>
+              <a href="../html/index(product).html "target="_blank">产品介绍</a>
+            </li>
+            <li>
+              <a href="../html/index(team).html" target="_blank">我们团队</a>
+            </li>
+            <li>
+              <a href="#">联系我们</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div id="banner">
+      <div class="banner_img">
+        <img src="../images/teamsjiasitingbanner_02.png" alt="">
+        <img src="../images/teamschalibanner_02.png" alt="">
+        <img src="../images/moka_02.png" alt="">
+      </div>
+      <div class="banner_box">
+          <button>&lt;</button>
+          <button>&gt;</button>
+          <ul>
+            <li dy="0" class="active"></li>
+            <li dy="1"></li>
+            <li dy="2"></li>
+          </ul>
+            <div class="banner_txt">
+                <p>
+                    <span>T</span> eam
+                </p>
+                <p>
+                  团队介绍<span> Introduction </span>
+                </p>
+            </div>
+      </div>
+    </div>
+    <div id="teams">
+        <div class="teams_box con">
+            <div class="teams_head">
+                <p class="active">
+                    <span><em></em>团队介绍</span>
+                    <span>Cappuccino</span>
+                </p>
+                <li>
+                    <a href="#">当前位置></a>
+                    <a href="#">首页></a>
+                    <a href="#">团队介绍</a>
+                </li>
+            </div>
+            <div class="teams_list">
+                <div class="teams_img">
+                    <img src="../images/teamlist_03.png" alt="">
+                </div>
+                <div class="teams_rt">
+                    <h4>
+                        <span><em>泰勒</em> -斯威夫特</span>
+                        <span>DUZU 公司总监</span>
+                    </h4>
+                    <p>泰勒出生于1994年3月1日的加拿大安大略省伦敦的圣若瑟医院  ， 并在安大略省的斯特拉特
+                        福成长。小泰的母亲怀孕时年仅17岁，而他的父母结婚10个月后就离婚， 因此他从小由自己的母
+                        亲、外公和外婆养大。</p>
+                    <p>泰勒从小对曲棍球、 足球和国际象棋感兴趣，  并一直追求自己的音乐梦想。  他从小自学了
+                        钢琴、鼓、吉他和小号。从五岁起他就无师自通，自学了钢琴、打鼓、 吉他和小号， 华横溢的比
+                        伯还非常热爱唱歌，他的歌声清脆而优美。早在2007年贾斯汀12岁时，在斯特拉特福德当地的歌
+                        唱比赛中演唱尼欧的歌曲《So Sick》并获得了比赛的第二名。</p>
+                </div>
+                <div class="teams_rb">
+                    <dl>
+                        <dt>
+                            <img src="" alt="">
+                        </dt>
+                        <dd>
+                            <img src="../images/teamsduanhengxian.png" alt="">
+                            <span>贾斯汀·比伯</span>
+                            <span>Justin Bieber</span>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                           <img src="" alt="">
+                        </dt>
+                        <dd>
+                            <img src="../images/teamsduanhengxian.png" alt="">
+                            <span>查理·普斯</span>
+                            <span>Charlie Puth</span>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                           <img src="" alt="">
+                        </dt>
+                        <dd>
+                            <img src="../images/teamsduanhengxian.png" alt="">
+                            <span>艾薇儿·拉维尼</span>
+                            <span>Avril Lavigne</span>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                           <img src="../images/teamstailei_03.png" alt="">
+                        </dt>
+                        <dd>
+                            <img src="../images/teamsduanhengxian.png" alt="">
+                            <span>泰勒·斯威夫特</span>
+                            <span>Taylor Swift</span>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+      <div class="footer_box">
+        <p>Copyright © 重庆duzu有限公司 | duzu备案号 33010602001878 号 版权所有：重庆戈登有限公司</p>
+         <img src="../images/footer.png" alt="">
+      </div>
+     
+    </footer>
+    <script>
+      //轮播
+      var bannerImg=document.getElementsByClassName("banner_img")[0];
+      var lisBox=document.getElementsByClassName("banner_box")[0];
+      var btns=lisBox.getElementsByTagName("button");
+      var lis=lisBox.getElementsByTagName("li");
+       var j=0;
+      for(var i=0;i<btns.length;i++){
+        btns[i].onclick=function(){
+          if(this.innerHTML=="&gt;"){
+            j++;
+            if(j==3){
+              j=0;
+            }
+            bannerImg.style.marginLeft=-100*j+"%";
+            for(var i=0;i<lis.length;i++){
+                  lis[i].className="";
+              }lis[j].className="active";
+                
+          }else{
+            j--;
+            if(j==-1){
+              j=2;
+            }
+            bannerImg.style.marginLeft=-100*j+"%";
+            for(var i=0;i<lis.length;i++){
+                  lis[i].className="";
+              }lis[j].className="active";
+          }
+        }
+      } 
+      for(var i=0;i<lis.length;i++){
+        lis[i].onclick=function(){
+          j=this.getAttribute("dy")
+          bannerImg.style.marginLeft=-100*j+"%";
+          for(var i=0;i<lis.length;i++){
+            lis[i].className=" ";
+          } lis[j].className="active";  
+        }
+      }
+
+      //自动播放
+      timer=setInterval(function(){       //自动轮播
+        j++;
+            if(j==3){
+              j=0;
+            }
+            bannerImg.style.marginLeft=-100*j+"%";
+            for(var i=0;i<lis.length;i++){
+                  lis[i].className="";
+              }lis[j].className="active";
+        },3000);
+        bannerImg.onmouseover=function(){        //鼠标停止
+            clearInterval(timer);
+            
+        }
+        btns.onmouseover=function(){        //鼠标停止
+            clearInterval(timer);   
+        }
+        bannerImg.onmouseout=function(){         //鼠标移开又开始
+            timer=setInterval(function(){
+              j++;
+            if(j==3){
+              j=0;
+            }
+            bannerImg.style.marginLeft=-100*j+"%";
+            for(var i=0;i<lis.length;i++){
+                  lis[i].className="";
+              }lis[j].className="active";
+            },3000);
+        }
+    </script>
+</body>
+</html>
